@@ -6,31 +6,31 @@
   "default_locale": "de",
   "icons": [
     {
-      "src": "",
+      "src": "../images/icon.png",
       "type": "image/png",
       "sizes": "32x32"
     },
 
     {
-      "src": "",
+      "src": "../images/icon.png",
       "type": "image/png",
       "sizes": "64x64"
     },
 
     {
-      "src": "",
+      "src": "../images/icon.png",
       "type": "image/png",
       "sizes": "128x128"
     },
 
     {
-      "src": "",
+      "src": "../images/icon.png",
       "type": "image/png",
       "sizes": "256x256"
     },
 
     {
-      "src": "",
+      "src": "../images/icon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -38,7 +38,7 @@
 
   "screenshots": [
     {
-      "src": "",
+      "src": "../images/screenshots/svg.png",
       "type": "image/png",
       "sizes": "1280x800"
     }
