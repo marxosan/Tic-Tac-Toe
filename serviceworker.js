@@ -14,6 +14,7 @@ var urlsToCache = [
     "index.html",
     "image/circle.svg",
     "image/cross.svg",
+    "image/favicon.ico",
     "controller/script.js",
     "style/style.css"
 ];
