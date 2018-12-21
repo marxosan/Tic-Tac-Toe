@@ -1,0 +1,72 @@
+td {
+    border: 3px solid lightblue;
+    width: 20vmin;
+    height: 20vmin;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 5vmin;
+    height: 50vmin;
+    background-image: url("../tic.jpg");
+    table-layout: fixed;
+}
+
+img {
+    display: block;
+    margin-bottom: -1px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5vmin;
+    margin: 0;
+}
+
+button {
+    padding: 1vmin 2vmin;
+    border-radius: 5px;
+    display: block;
+    width: 20vmin;
+    margin: 5vmin auto auto;
+    font-size: 2vmin;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    background-image: url("../tic.jpg");
+    font-family: "Berlin Sans FB Demi";
+}
+
+.pulse:hover,
+.pulse:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em rgba(255, 0, 0, 0);
+}
+
+
+.tichead {
+    background-image: url("../tic.jpg");
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vmin;
+    width: 50vmin;
+    padding: 1vmin 20px;
+    font-size: 3vmin;
+    color: white;
+    border: 2px double lightblue;
+    height: 5vmin;
+    font-family: "Berlin Sans FB Demi";
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0; }
+}
+
+body {
+    background-image: url("../tic.jpg");
+}
