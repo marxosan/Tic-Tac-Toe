@@ -1,12 +1,11 @@
 /*
-* grrd's Tic Tac Toe
-* Copyright (c) 2018 Gerard Tyedmers, grrd@gmx.net
-* Licensed under the MPL License
+* marcos's Tic Tac Toe
+* Copyright (c) 2018 Marco Hofer
 */
 
 /*jslint devel: true, browser: true, long: true */ /*global self fetch */
 
-var CACHE_NAME = "grrds-tictactoe-cache";
+var CACHE_NAME = "marcos-tictactoe-cache";
 var CACHE_VERSION = "v1.0";
 var CACHE = CACHE_NAME + "-" + CACHE_VERSION;
 
@@ -14,7 +13,8 @@ var urlsToCache = [
     "index.html",
     "image/circle.svg",
     "image/cross.svg",
-    "image/favicon.ico",
+    "image/favicon-16x16.png",
+    "image/icon.png",
     "controller/script.js",
     "style/style.css"
 ];
