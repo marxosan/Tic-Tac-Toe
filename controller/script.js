@@ -32,24 +32,64 @@
         }
     }
 
+    /*
+    function bestPlay() {
+
+        let bestMove;
+
+        if (currentPlayer === Player2) {
+            let bestScore = -10000;
+            for (let i = 0; i < moves.length; i++) {
+                if (moves[i].score > bestScore) {
+                    bestScore = moves[i].score;
+                    bestMove = i;
+                }
+            }
+        } else {
+
+// else loop over the moves and choose the move with the lowest score
+            let bestScore = 10000;
+            for (let i = 0; i < moves.length; i++) {
+                if (moves[i].score < bestScore) {
+                    bestScore = moves[i].score;
+                    bestMove = i;
+                }
+            }
+        }
+
+// return the chosen move (object) from the moves array
+        return moves[bestMove];
+    } */
+
     function checkWin() {
         GameBoard.forEach(function (GameRow, nIndexRow) {
             if (GameRow[0] === currentPlayer &&
-                    GameRow[1] === currentPlayer &&
-                    GameRow[2] === currentPlayer) {
-            }
-            else if (GameBoard[0][nIndexRow] === currentPlayer &&
-                    GameBoard[1][nIndexRow] === currentPlayer &&
-                    GameBoard[2][nIndexRow] === currentPlayer) {
+                GameRow[1] === currentPlayer &&
+                GameRow[2] === currentPlayer) {
+                document.getElementById("head").innerHTML = "<h1>YOU WIN</h1>";
+                document.getElementById("playerturn").classList.remove("show");
+                document.getElementById("playerturn1").classList.remove("show");
+            } else if (GameBoard[0][nIndexRow] === currentPlayer &&
+                GameBoard[1][nIndexRow] === currentPlayer &&
+                GameBoard[2][nIndexRow] === currentPlayer) {
+                document.getElementById("head").innerHTML = "<h1>YOU WIN</h1>";
+                document.getElementById("playerturn").classList.remove("show");
+                document.getElementById("playerturn1").classList.remove("show");
             }
         });
         if (GameBoard[0][0] === currentPlayer &&
-                GameBoard[1][1] === currentPlayer &&
-                GameBoard[2][2] === currentPlayer) {
+            GameBoard[1][1] === currentPlayer &&
+            GameBoard[2][2] === currentPlayer) {
+            document.getElementById("head").innerHTML = "<h1>YOU WIN</h1>";
+            document.getElementById("playerturn").classList.remove("show");
+            document.getElementById("playerturn1").classList.remove("show");
         }
         if (GameBoard[0][2] === currentPlayer &&
-                GameBoard[1][1] === currentPlayer &&
-                GameBoard[2][0] === currentPlayer) {
+            GameBoard[1][1] === currentPlayer &&
+            GameBoard[2][0] === currentPlayer) {
+            document.getElementById("head").innerHTML = "<h1>YOU WIN</h1>";
+            document.getElementById("playerturn").classList.remove("show");
+            document.getElementById("playerturn1").classList.remove("show");
         }
     }
 
@@ -63,6 +103,7 @@
             } else {
                 GameBoard[2][square.target.id - 6] = currentPlayer;
             }
+            showPlayerTurn();
             checkWin();
             switchPlayer();
         }
@@ -75,6 +116,7 @@
             cell.addEventListener("click", turnClick, false);
         });
     }
+
     startGame();
 
     document.getElementById("btn").onclick = function () {
@@ -91,19 +133,26 @@
             GameBoard = [[".", ".", "."], [".", ".", "."], [".", ".", "."]];
             Board = Array.from(new Array(9).keys());
         }
+        document.getElementById("playerturn").classList.add("show");
+        document.getElementById("playerturn1").classList.remove("show");
+        document.getElementById("head").innerHTML = "<h1>Tic-Tac-Toe</h1>";
+    }
+
+    function showPlayerTurn() {
+        document.getElementById("playerturn").classList.toggle("show");
+        document.getElementById("playerturn1").classList.toggle("show");
     }
 
     function fInit() {
-    // ServiceWorker initialisieren
-    if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function () {
-            navigator.serviceWorker.register("serviceworker.js").then(function (registration) {
-                console.log("ServiceWorker registration successful with scope: ", registration.scope);
-            }, function (err) {
-                console.log("ServiceWorker registration failed: ", err);
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker.register
+                ("serviceworker.js").then(function (registration) {
+                    console.log("ServiceWorker registration successful with scope: ", registration.scope);
+                }, function (err) {
+                    console.log("ServiceWorker registration failed: ", err);
+                });
             });
-        });
+        }
     }
-}
-
 }());
