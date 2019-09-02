@@ -3,38 +3,52 @@
 <html lang="DE">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#317EFB"/>
+    <meta name="Description" content="Put your description here.">
+
     <title>Tic Tac Toe</title>
 
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="image/icon_ios.png">
     <link href="style/style.css" rel="stylesheet">
     <link rel="manifest" href="manifest/appmanifest.json">
 </head>
 
-<body>
+<body class="body">
 
-<div class="tichead">
+<div class="tichead" id="head">
     <h1>Tic-Tac-Toe</h1>
 </div>
 
-<table id="GameTable">
-    <tr>
-        <td class="cell" id="0"></td>
-        <td class="cell" id="1"></td>
-        <td class="cell" id="2"></td>
-    </tr>
-    <tr>
-        <td class="cell" id="3"></td>
-        <td class="cell" id="4"></td>
-        <td class="cell" id="5"></td>
-    </tr>
-    <tr>
-        <td class="cell" id="6"></td>
-        <td class="cell" id="7"></td>
-        <td class="cell" id="8"></td>
-    </tr>
-</table>
-<div class="endgame">
-    <div class="text"></div>
+<div class="wrapper">
+    <div class="show" id="playerturn">
+        Player O, it's your turn!
+    </div>
+
+    <table id="GameTable">
+        <tr>
+            <td class="cell" id="0"></td>
+            <td class="cell" id="1"></td>
+            <td class="cell" id="2"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="3"></td>
+            <td class="cell" id="4"></td>
+            <td class="cell" id="5"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="6"></td>
+            <td class="cell" id="7"></td>
+            <td class="cell" id="8"></td>
+        </tr>
+    </table>
+
+    <div id="playerturn1">
+        Player X, it's your turn!
+    </div>
 </div>
+
 <button id="btn" class="pulse">PLAY AGAIN</button>
 
 <script src="controller/script.js"></script>
