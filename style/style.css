@@ -157,6 +157,10 @@ img {
             opacity: 0;
         }
 
+        .body {
+            overflow: hidden;
+        }
+
 }
 
 @keyframes bounceIn {
