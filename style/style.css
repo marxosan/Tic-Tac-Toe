@@ -4,6 +4,7 @@ body {
     height: 100%;
     overflow: hidden;
     position: fixed;
+    background-image: url("../tic.jpg");
 }
 
 td {
@@ -206,10 +207,6 @@ img {
 
 @keyframes pulse {
     0% { box-shadow: 0 0 0 0; }
-}
-
-body {
-    background-image: url("../tic.jpg");
 }
 
 #head {
