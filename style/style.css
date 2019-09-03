@@ -5,6 +5,8 @@ body {
     overflow: hidden;
     position: fixed;
     background-image: url("../tic.jpg");
+    margin: 0;
+    padding: 0;
 }
 
 td {
