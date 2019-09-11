@@ -20,7 +20,6 @@
             myIMG.src = "image/cross.svg";
         }
         Board[squareId] = player;
-        console.log(Board);
         document.getElementById(squareId).appendChild(myIMG);
     }
 
@@ -66,13 +65,13 @@
             if (GameRow[0] === currentPlayer &&
                 GameRow[1] === currentPlayer &&
                 GameRow[2] === currentPlayer) {
-                document.getElementById("head").innerHTML = "<h1>YOU WIN</h1>";
+                document.getElementById("head").innerHTML = "<h1 class='shake-lr'>YOU WIN</h1>";
                 document.getElementById("playerturn").classList.remove("show");
                 document.getElementById("playerturn1").classList.remove("show");
             } else if (GameBoard[0][nIndexRow] === currentPlayer &&
                 GameBoard[1][nIndexRow] === currentPlayer &&
                 GameBoard[2][nIndexRow] === currentPlayer) {
-                document.getElementById("head").innerHTML = "<h1>YOU WIN</h1>";
+                document.getElementById("head").innerHTML = "<h1 class='shake-lr'>YOU WIN</h1>";
                 document.getElementById("playerturn").classList.remove("show");
                 document.getElementById("playerturn1").classList.remove("show");
             }
@@ -80,17 +79,18 @@
         if (GameBoard[0][0] === currentPlayer &&
             GameBoard[1][1] === currentPlayer &&
             GameBoard[2][2] === currentPlayer) {
-            document.getElementById("head").innerHTML = "<h1>YOU WIN</h1>";
+            document.getElementById("head").innerHTML = "<h1 class='shake-lr'>YOU WIN</h1>";
             document.getElementById("playerturn").classList.remove("show");
             document.getElementById("playerturn1").classList.remove("show");
         }
         if (GameBoard[0][2] === currentPlayer &&
             GameBoard[1][1] === currentPlayer &&
             GameBoard[2][0] === currentPlayer) {
-            document.getElementById("head").innerHTML = "<h1>YOU WIN</h1>";
+            document.getElementById("head").innerHTML = "<h1 class='shake-lr'>YOU WIN</h1>";
             document.getElementById("playerturn").classList.remove("show");
             document.getElementById("playerturn1").classList.remove("show");
         }
+
     }
 
     function turnClick(square) {

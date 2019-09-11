@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="DE">
+<html lang="DE" class="html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,18 +15,18 @@
     <link rel="manifest" href="manifest/appmanifest.json">
 </head>
 
-<body>
+<body class="body">
 
-<div class="tichead" id="head">
+<div class="tichead flicker-in-1" id="head">
     <h1>Tic-Tac-Toe</h1>
 </div>
 
 <div class="wrapper">
-    <div class="show" id="playerturn">
+    <div class="show flicker-in-1" id="playerturn">
         Player O, it's your turn!
     </div>
 
-    <table id="GameTable">
+    <table class="flicker-in-1" id="GameTable">
         <tr>
             <td class="cell" id="0"></td>
             <td class="cell" id="1"></td>
@@ -49,7 +49,7 @@
     </div>
 </div>
 
-<button id="btn" class="pulse">PLAY AGAIN</button>
+<button id="btn" class="pulse flicker-in-1">PLAY AGAIN</button>
 
 <script src="controller/script.js"></script>
 
